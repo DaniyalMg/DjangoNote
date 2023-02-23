@@ -1,0 +1,202 @@
+@import "fonts.css";
+:root {
+    --fa-primary-color: rgb(83, 83, 83);
+    --fa-secondary-color: rgb(146, 146, 146);
+}
+
+body{
+    background-color: #151616 !important;
+}
+
+* {
+    direction: rtl;
+    font-family: iransans;
+    box-sizing: border-box;
+}
+img{
+    object-fit: cover;
+}
+.menu-items {
+    list-style-type: none;
+    transition: all .4s ease;
+}
+
+.menu-items:hover {
+    color: #b38151 !important;
+}
+
+.pointer-event {
+    cursor: pointer;
+}
+
+.background {
+    background: #151616 url(../img/flower.png) top center no-repeat;
+}
+
+.img-ballon {
+    height: 35vh;
+    object-fit: cover;
+}
+
+.text-first{
+    color: #183d34;
+}
+.text-second{
+    color: #b38151;
+}
+.text-third{
+    color: #8d3b46;
+}
+tr,td, th{
+    padding: 1rem;
+}
+.text-forth{
+    color: #d4d2cd !important;
+}
+.bg-first{
+    background-color: #183d34;
+}
+.bg-second{
+    background-color: #b38151;
+}
+.bg-third{
+    background-color: #8d3b46;
+}
+.bg-forth{
+    background-color: #d4d2cd;
+}
+
+footer,header{
+    border-radius: 40px;
+}
+/* ---------------------------- Home ------------------------------------ */
+
+.img_top {
+    height: 20vh;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.imges_header_item {
+    object-fit: cover;
+    width: 46% !important;
+}
+
+.discription {
+    overflow: hidden;
+}
+
+.resereve_form {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.border-form-reserve {
+    border: 2px solid rgba(124, 114, 114, 0.479);
+}
+
+.img_sini {
+    height: 20vh;
+    width: 50vw !important;
+    object-fit: cover;
+}
+
+.loading {
+    height: 100%;
+    background: #000000a3;
+    position: absolute;
+    right: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.list-style {
+    list-style: disc;
+}
+
+.justify {
+    text-align: justify;
+}
+
+
+/* ...........................Gallery.............................. */
+
+.img_top_gallery {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 110px;
+}
+
+.img_around_gallery {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 42vh;
+}
+
+.img_under_gallery {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 16vh;
+    position: relative;
+    display: block;
+    left: 0%;
+}
+
+.gallery-under-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.img_gallery_under_tow {
+    width: 67%;
+    object-fit: cover;
+    height: 15vh;
+}
+
+@media only screen and (min-width:576px) {
+    .img_under_gallery {
+        left: 27%;
+        position: absolute;
+        height: 20vh;
+        width: 35% !important;
+    }
+    .gallery-under-row {
+        width: 218%;
+    }
+    .img_gallery_under_tow {
+        height: 19vh;
+    }
+    .img_top {
+        height: 40vh;
+    }
+    .imges_header_item {
+        height: 23vh;
+        width: 42% !important;
+    }
+}
+
+@media only screen and (min-width:830px) {
+    .gallery-under-row {
+        width: 210%;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    /* .gallery-under-row { */
+        /* margin-top: 6rem !important; */
+    /* } */
+    .img_under_gallery {
+        height: 16vh;
+    }
+    .img_around_gallery {
+        height: 33vh !important;
+    }
+    .img_around_gallery_res {
+        height: 38vh !important;
+    }
+}

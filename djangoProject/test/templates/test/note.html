@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}notes{% endblock %}
+
+{% block main %}
+    <main class="background p-5">
+        {% for note in notes %}
+            <div class="card m-2 p-3 rounded-5 bg-forth col-10 col-sm-6 col-md-12 mx-md-auto" style="max-width: 540px;">
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="row">
+                                <h5 class="h5 d-inline-block col-12 col-sm">{{ note.title }}</h5>
+                                <h5 class="h6 small d-inline-block col-12 col-sm text-sm-end">{{ note.date }}</h5>
+                            </div>
+                            <p class="my-4 justify">{{ note.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}

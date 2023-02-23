@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'icons/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.rtl.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'icons/eitaa/css/eitaa.css' %}">
+</head>
+
+<body>
+    <header class="bg-first row p-3 align-items-center rounded-top w-100 m-0">
+        <div class="col-4 col-md-8">
+            <ul class="d-none d-md-block small">
+                <a href="{% url 'getnote' %}" class="text-decoration-none">
+                    <li class=" text-forth menu-items d-inline-block m-2 p-2">اضافه کردن نوت</li>
+                </a>
+                <a href="{% url 'note' %}" class="text-decoration-none">
+                    <li class=" text-forth menu-items d-inline-block m-2 p-2">نوت ها</li>
+                </a>
+            </ul>
+
+            <a class="p-4 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                aria-controls="staticBackdrop">
+                <i class="fas  text-forth fa-bars fa-2xl"></i>
+            </a>
+
+            <div class="offcanvas offcanvas-start bg-first" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="staticBackdropLabel">منو</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="small p-0">
+                        <a href="{% url 'getnote' %}" class="text-decoration-none">
+                            <li class="text-dark menu-items m-2 p-2">اضافه کردن نوت</li>
+                        </a>
+                        <a href="{% url 'note' %}" class="text-decoration-none">
+                            <li class="text-dark menu-items m-2 p-2">نوت ها</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 col-md-4 text-end">
+            <img src="{% static 'img/logo.png' %}" alt="logo" class="overflow-auto w-50">
+        </div>
+    </header>
+
+    {% block main %}{% endblock %}
+
+    <footer class="bg-first row p-4 rounded-bottom w-100 m-0 d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-4 text-center">
+            <h6 class=" text-forth h6  py-2">دسترسی به صفحات</h6>
+            <ul class="small p-0">
+                <a href="{% url 'getnote' %}" class="text-decoration-none">
+                    <li class=" text-forth menu-items m-2 p-2 d-inline-block">اضافه کردن نوت</li>
+                </a>
+                <a href="{% url 'note' %}" class="text-decoration-none">
+                    <li class=" text-forth menu-items m-2 p-2 d-inline-block">نوت ها</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mt-5 flex-column">
+            <div class="row d-flex justify-content-center align-items-center">
+                <img src="{% static 'img/logo.png' %}" alt="zohoor logo" class="overflow-auto w-50">
+            </div>
+            <div class="row my-5">
+                <div class="d-inline-block bg-forth m-1 rounded-3 col-4" style="width: 70px; height: 70px;"></div>
+                <div class="d-inline-block bg-forth m-1 rounded-3 col-4" style="width: 70px; height: 70px;"></div>
+                <div class="d-inline-block bg-forth m-1 rounded-3 col-4" style="width: 70px; height: 70px;"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.1.js' %}"></script>
+    <script src="{% static 'js/modal-sign_up.js' %}"></script>
+</body>
+
+</html>

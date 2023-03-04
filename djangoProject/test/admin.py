@@ -5,4 +5,4 @@ from .models import Note
 
 @admin.register(Note)
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description')
+    list_display = ('title', 'author', 'description')

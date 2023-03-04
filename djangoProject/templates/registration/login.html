@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Log In
+{% endblock %}
+
+{% block main %}
+    <main class="background text-forth p-2 vh-100">
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">log in</button>
+        </form>
+    </main>
+{% endblock %}

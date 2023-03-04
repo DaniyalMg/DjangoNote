@@ -13,6 +13,7 @@ def getnote(request):
     elif request.method == 'POST':
 
         form = NoteForm(request.POST)
+        form.instance.author = request.user
 
         if form.is_valid():
             form.save()
@@ -25,6 +26,6 @@ def getnote(request):
 def note(request):
     if request.method == 'GET':
 
-        notes = Note.objects.all()
+        notes = Note.objects.filter(author=request.user)
 
         return render(request, 'test/note.html', context={'notes': notes})
